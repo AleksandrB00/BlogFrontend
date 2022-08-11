@@ -63,7 +63,7 @@ export default {
         endpoints: {
           login: { url: '/blogapi/token/', method: 'post' },
           refresh: { url: '/blogapi/refresh_token/', method: 'post' },
-          user: { url: '/blogapi/profile_view/', method: 'get' },
+          user: { url: '/blogapi/profile_view', method: 'get' },
           logout: false
         },
         tokenRequired: true,

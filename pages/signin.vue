@@ -2,7 +2,7 @@
   <div>
     <div class="text-center">
       <form class="form-signin" @submit.prevent="userLogin">
-        <h1 class="h3 mb-3 mt-3 font-weight-normal">Пожалуйста укажите логин и пароль</h1>
+        <h1 class="h3 mb-3 mt-3 font-weight-normal">Введите ваше имя пользователя и пароль</h1>
         <label for="inputUsername" class="sr-only">Имя пользователя</label>
         <input id="inputUsername" class="form-control" placeholder="Имя пользователя" required="" v-model="login.username">
         <label for="inputPassword" class="sr-only">Пароль</label>
