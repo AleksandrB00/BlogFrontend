@@ -60,6 +60,10 @@ export default {
           data: 'refresh',
           maxAge: 60 * 60 * 24 * 30
         },
+        user: {
+          property: false,
+          autoFetch: true
+        },
         endpoints: {
           login: { url: '/blogapi/token/', method: 'post' },
           refresh: { url: '/blogapi/refresh_token/', method: 'post' },

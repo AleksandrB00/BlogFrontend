@@ -2,11 +2,11 @@
   <div>
     <div class="text-center">
       <form class="form-signin" @submit.prevent="userLogin">
-        <h1 class="h3 mb-3 mt-3 font-weight-normal">Введите ваше имя пользователя и пароль</h1>
+        <h1 class="h3 mb-3 mt-3 font-weight-normal">Пожалуйста укажите логин и пароль</h1>
         <label for="inputUsername" class="sr-only">Имя пользователя</label>
-        <input id="inputUsername" class="form-control" placeholder="Имя пользователя" required="" v-model="login.username">
+        <input id="inputUsername" class="form-control" placeholder="username" required="" v-model="login.username">
         <label for="inputPassword" class="sr-only">Пароль</label>
-        <input type="password" id="inputPassword" class="form-control mt-2" placeholder="Пароль" required="" v-model="login.password">
+        <input type="password" id="inputPassword" class="form-control mt-2" placeholder="password" required="" v-model="login.password">
         <button class="btn mt-2 btn-lg btn-primary btn-block" type="submit">Войти</button>
       </form>
     </div>
@@ -29,7 +29,7 @@ export default {
       try {
         let response = await this.$auth.loginWith('local', { data: this.login })
         console.log(response)
-        this.$router.push('/')
+        this.$router.back()
       } catch (err) {
         console.log(err)
       }
