@@ -24,7 +24,7 @@
             <div class="p-2">Опубликовано: {{ post.post_date }}</div>
           </div>
           <hr>
-          <Comments />
+          <Comments :comments="comments"/>
         </div>
         <Aside :tags=tags :aside=aside />
       </div>
@@ -48,10 +48,12 @@ export default {
     const post = await axios.get(`http://127.0.0.1:8000/blogapi/posts/${params.slug}`);
     const tags = await axios.get(`http://127.0.0.1:8000/blogapi/tags/`);
     const aside = await axios.get(`http://127.0.0.1:8000/blogapi/aside/`);
+    const comments = await axios.get(`http://127.0.0.1:8000/blogapi/comments/${params.slug}`);
     return {
       post: post.data,
       tags: tags.data,
       aside: aside.data,
+      comments: comments.data
     }
   },
 }
