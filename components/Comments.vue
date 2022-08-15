@@ -37,8 +37,8 @@ export default {
     async addComment() {
       try {
         let response = await this.$axios.post('http://localhost:8000/blogapi/comments/', {
-        post: this.$props.post.username,
-        username: this.user.username,
+        post: this.$props.post.slug,
+        username: this.user.user_info.username,
         text: this.new_comment,
       })
         this.new_comment = '';
