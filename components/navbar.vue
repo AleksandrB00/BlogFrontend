@@ -24,6 +24,7 @@
       <client-only>
       <span v-if="loggedIn">
       <span class="navbar-text mr-2">{{user.user_info.username}}</span>
+      <nuxt-link class="btn btn-outline-light mr-2" to="/profile_edit">Профиль</nuxt-link>
       <nuxt-link class="btn btn-outline-light mr-2" to="/signout">Выход</nuxt-link>
       </span>
       <span v-else>
